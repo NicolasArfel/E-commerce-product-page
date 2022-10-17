@@ -1,0 +1,24 @@
+{
+  "devDependencies": {
+    "typescript": "^4.8.4"
+  },
+  "name": "e-commerce",
+  "description": "![Design preview for the E-commerce product page coding challenge](./design/desktop-preview.jpg)",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "tsc --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NicolasArfel/E-commerce-product-page.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NicolasArfel/E-commerce-product-page/issues"
+  },
+  "homepage": "https://github.com/NicolasArfel/E-commerce-product-page#readme"
+}
