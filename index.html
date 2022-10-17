@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="./styles/reset.css" />
     <link rel="stylesheet" href="./styles/styles.css" />
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
-    <script src="./dest/script.js" defer></script>
+    <script src="./index.js" defer></script>
     <title>Frontend Mentor | E-commerce product page</title>
   </head>
   <body>
@@ -87,10 +87,13 @@
           </div>
           <div class="buttons">
             <button class="button count">
-              <img src="./images/icon-minus.svg" alt="icone de caddy" />0<img
-                src="./images/icon-plus.svg"
+              <img
+                id="remove"
+                src="./images/icon-minus.svg"
                 alt="icone de caddy"
               />
+              <p id="counter">0</p>
+              <img id="add" src="./images/icon-plus.svg" alt="icone de caddy" />
             </button>
             <button class="button add">
               <span class="cart material-symbols-outlined"> shopping_cart </span
