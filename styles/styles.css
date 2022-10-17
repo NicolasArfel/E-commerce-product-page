@@ -85,7 +85,7 @@ a {
   left: 35%;
 }
 .count-actived {
-  display: inline-block;
+  display: flex;
 }
 .navbar__right-avatar {
   cursor: pointer;

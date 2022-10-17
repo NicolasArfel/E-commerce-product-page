@@ -39,5 +39,45 @@ function setActived() {
   });
 }
 
+// if i click on an small image i want it to replace
+// the big one and be selected with the style "selected"
+function setSelected() {
+  const imgEl = document.querySelectorAll('.main__left-small-container');
+  imgEl.forEach((img) => {
+    img.addEventListener('click', () => {
+      imgEl.forEach((img) => img.classList.remove('selected'));
+      img.classList.add('selected');
+    });
+  });
+  const images = document.querySelectorAll('.image');
+  const largeImage = document.querySelector('.main__left-large');
+  images.forEach((img) => {
+    img.addEventListener('click', () => {
+      let source = img.src;
+      if (
+        source == 'http://127.0.0.1:5500/images/image-product-3-thumbnail.jpg'
+      ) {
+        largeImage.src = 'http://127.0.0.1:5500/images/image-product-3.jpg';
+      }
+      if (
+        source == 'http://127.0.0.1:5500/images/image-product-1-thumbnail.jpg'
+      ) {
+        largeImage.src = 'http://127.0.0.1:5500/images/image-product-1.jpg';
+      }
+      if (
+        source == 'http://127.0.0.1:5500/images/image-product-2-thumbnail.jpg'
+      ) {
+        largeImage.src = 'http://127.0.0.1:5500/images/image-product-2.jpg';
+      }
+      if (
+        source == 'http://127.0.0.1:5500/images/image-product-4-thumbnail.jpg'
+      ) {
+        largeImage.src = 'http://127.0.0.1:5500/images/image-product-4.jpg';
+      }
+    });
+  });
+}
+
+setSelected();
 changeArticleCount();
 setActived();
