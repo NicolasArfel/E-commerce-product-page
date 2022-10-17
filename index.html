@@ -13,57 +13,82 @@
     />
     <link rel="stylesheet" href="./styles/reset.css" />
     <link rel="stylesheet" href="./styles/styles.css" />
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
     <script src="./dest/script.js" defer></script>
     <title>Frontend Mentor | E-commerce product page</title>
   </head>
   <body>
     <header>
-      <nav>
-        <img src="./images/logo.svg" alt="logo écrit de la marque sneakers" />
-        <ul>
-          <li>Collections</li>
-          <li>Men</li>
-          <li>Women</li>
-          <li>About</li>
-          <li>Contact</li>
-        </ul>
-        <img src="./images/icon-cart.svg" alt="icone de caddy" />
-        <img
-          src="./images/image-avatar.png"
-          alt="selfie d'un homme métisse avec des cheveux longs frisés et des lunettes de soleil"
-        />
+      <nav class="navbar">
+        <div class="navbar__left">
+          <img src="./images/logo.svg" alt="logo écrit de la marque sneakers" />
+          <ul class="navbar__left-list">
+            <li class="navbar__left-links"><a href="#">Collections</a></li>
+            <li class="navbar__left-links"><a href="#">Men</a></li>
+            <li class="navbar__left-links"><a href="#">Women</a></li>
+            <li class="navbar__left-links"><a href="#">About</a></li>
+            <li class="navbar__left-links"><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div class="navbar__right">
+          <img
+            class="navbar__right-cart"
+            src="./images/icon-cart.svg"
+            alt="icone de caddy"
+          />
+          <img
+            class="navbar__right-avatar"
+            src="./images/image-avatar.png"
+            alt="selfie d'un homme métisse avec des cheveux longs frisés et des lunettes de soleil"
+          />
+        </div>
       </nav>
     </header>
-    <main>
-      <section>
-        <img src="./images/image-product-1.jpg" alt="" />
-        <img src="./images/image-product-1-thumbnail.jpg" alt="" />
-        <img src="./images/image-product-2-thumbnail.jpg" alt="" />
-        <img src="./images/image-product-3-thumbnail.jpg" alt="" />
-        <img src="./images/image-product-4-thumbnail.jpg" alt="" />
-      </section>
-      <article>
-        <h1>Sneaker Company</h1>
-        <h2>Fall Limited Edition Sneakers</h2>
-        <p>
-          These low-profile sneakers are your perfect casual wear companion.
-          Featuring a durable rubber outer sole, they’ll withstand everything
-          the weather can offer.
-        </p>
-        <div>
-          <div>
-            <p>$125.00</p>
-            <p>50%</p>
-          </div>
-          <p>$250.00</p>
+    <main class="main">
+      <section class="main__left">
+        <img
+          class="main__left-large"
+          src="./images/image-product-1.jpg"
+          alt=""
+        />
+        <div class="main__left-small">
+          <img src="./images/image-product-1-thumbnail.jpg" alt="" />
+          <img src="./images/image-product-2-thumbnail.jpg" alt="" />
+          <img src="./images/image-product-3-thumbnail.jpg" alt="" />
+          <img src="./images/image-product-4-thumbnail.jpg" alt="" />
         </div>
-        <div>
+      </section>
+      <article class="main__right">
+        <div class="main__right-container">
+          <h2 class="main__right-category">Sneaker Company</h2>
+          <h1 class="main__right-title">Fall Limited Edition Sneakers</h1>
+          <p class="main__right-description">
+            These low-profile sneakers are your perfect casual wear companion.
+            Featuring a durable rubber outer sole, they’ll withstand everything
+            the weather can offer.
+          </p>
           <div>
-            <button>-</button>
-            <p>0</p>
-            <button>+</button>
+            <div class="main__right-amount">
+              <p class="main__right-total">$125.00</p>
+              <p class="main__right-reduce">50%</p>
+            </div>
+            <p class="main__right-price">$250.00</p>
           </div>
-          <button>Add to cart</button>
+          <div class="buttons">
+            <button class="button count">
+              <img src="./images/icon-minus.svg" alt="icone de caddy" />0<img
+                src="./images/icon-plus.svg"
+                alt="icone de caddy"
+              />
+            </button>
+            <button class="button add">
+              <img
+                class="cart"
+                src="./images/icon-cart.svg"
+                alt="icone de caddy"
+              />Add to cart
+            </button>
+          </div>
         </div>
       </article>
     </main>
