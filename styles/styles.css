@@ -13,12 +13,12 @@
 body {
   font-size: 16px;
   font-family: 'Kumbh Sans', sans-serif;
-  width: 80%;
+  width: 100%;
   max-height: 100vh;
   margin: auto;
   display: flex;
   flex-direction: column;
-  /* justify-content: space-between; */
+  position: relative;
 }
 
 a {
@@ -27,6 +27,10 @@ a {
 }
 
 /* --- header --- */
+header {
+  width: 80%;
+  margin: 0 auto;
+}
 .navbar {
   height: 100px;
   width: 100%;
@@ -100,11 +104,10 @@ a {
 /* --- main --- */
 .main {
   display: flex;
-  width: 100%;
-  height: 100vh;
-  /* justify-content: center; */
+  width: 80%;
+  height: 85vh;
+  margin: 0 auto;
   align-items: center;
-  /* margin: auto; */
 }
 
 .main__left {
@@ -117,6 +120,7 @@ a {
   width: 75%;
   margin: auto;
   border-radius: 15px;
+  cursor: pointer;
 }
 .main__left-small {
   display: flex;
@@ -244,13 +248,32 @@ a {
 
 .ligth-box {
   display: none;
-  height: 50vh;
+  height: 100vh;
+  width: 100%;
   position: absolute;
-  left: 25%;
-  top: 25%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
 }
-.large {
-  margin-top: 0;
+
+.light-box__large-container {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.small {
+  width: 30%;
+}
+.close {
+  position: absolute;
+  right: 12.5%;
+  top: -5%;
+  color: var(--orange);
+  font-weight: bold;
+  cursor: pointer;
 }
 .arrow {
   border-radius: 50%;
@@ -265,23 +288,49 @@ a {
 .left {
   position: absolute;
   left: 10%;
-  top: 40%;
+  top: 50%;
 }
 .right {
   position: absolute;
   right: 10%;
-  top: 40%;
-}
-.close {
-  position: absolute;
-  top: -10%;
-  right: 12%;
-  color: var(--orange);
-  font-weight: bold;
-  cursor: pointer;
+  top: 50%;
 }
 
+.modale {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 10%;
+  right: 6%;
+  box-shadow: 0px 5px 50px 0px rgba(0, 0, 0, 0.5);
+  background-color: white;
+  height: 200px;
+  width: 300px;
+  border-radius: 10px;
+  font-weight: 700;
+}
+
+.modale__title {
+  height: 10%;
+  border-bottom: 1px solid var(--grayish-blue);
+  padding: 1rem;
+}
+
+.modale__description {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  height: 75%;
+  font-size: 0.9rem;
+  letter-spacing: 0.2;
+}
+
+.isActive {
+  display: flex;
+}
 /* --- footer --- */
+
 .attribution {
   font-size: 11px;
   text-align: center;
