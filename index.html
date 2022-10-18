@@ -18,20 +18,36 @@
     <link rel="stylesheet" href="./styles/styles.css" />
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
     <script src="./index.js" defer></script>
+    <script src="./js/navbar.js" defer></script>
     <title>Frontend Mentor | E-commerce product page</title>
   </head>
   <body>
     <header>
       <nav class="navbar">
         <div class="navbar__left">
-          <img src="./images/logo.svg" alt="logo écrit de la marque sneakers" />
-          <ul class="navbar__left-list">
-            <li class="navbar__left-links"><a href="#">Collections</a></li>
-            <li class="navbar__left-links"><a href="#">Men</a></li>
-            <li class="navbar__left-links"><a href="#">Women</a></li>
-            <li class="navbar__left-links"><a href="#">About</a></li>
-            <li class="navbar__left-links"><a href="#">Contact</a></li>
-          </ul>
+          <img
+            class="navbar__left-burger"
+            src="./images/icon-menu.svg"
+            alt="trois barres horizontales pour le menu burger"
+          />
+
+          <img
+            class="navbar__left-logo"
+            src="./images/logo.svg"
+            alt="logo écrit de la marque sneakers"
+          />
+          <div class="navbar__menu">
+            <ul class="navbar__left-list">
+              <span class="material-symbols-outlined navbar__left-close">
+                close
+              </span>
+              <li class="navbar__left-links"><a href="#">Collections</a></li>
+              <li class="navbar__left-links"><a href="#">Men</a></li>
+              <li class="navbar__left-links"><a href="#">Women</a></li>
+              <li class="navbar__left-links"><a href="#">About</a></li>
+              <li class="navbar__left-links"><a href="#">Contact</a></li>
+            </ul>
+          </div>
         </div>
         <div class="navbar__right">
           <img

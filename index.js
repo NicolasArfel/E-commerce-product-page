@@ -55,8 +55,6 @@ function createProductInModale() {
       modaleActivated = false;
       firstEl.remove();
       checkoutEl.remove();
-
-      console.log('hi');
     });
   }
   deleteProduct();
