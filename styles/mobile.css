@@ -1,0 +1,88 @@
+@media screen and (max-width: 700px) {
+  body {
+    width: 100%;
+  }
+  .main {
+    flex-direction: column;
+    width: 100%;
+    margin: 1rem;
+  }
+  .main__left,
+  .main__right {
+    width: 90%;
+  }
+  .main__right-total {
+    display: flex;
+    justify-content: space-between;
+  }
+  footer {
+    position: fixed;
+    bottom: 0;
+    left: 25%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .main {
+    margin: 0;
+  }
+  .main__left-small {
+    display: none;
+  }
+  .main__left {
+    width: 100% !important;
+    height: 300px;
+  }
+  .main__left-large {
+    object-fit: cover;
+    object-position: left;
+    width: 400px;
+    max-height: 100% !important;
+    border-radius: 0;
+  }
+  .main__right {
+    margin: 1rem;
+    width: 100%;
+  }
+  .main__right-category {
+    font-size: 0.8rem;
+  }
+  .main__right-title {
+    font-size: 1.5rem;
+  }
+  .main__right-description {
+    font-size: 0.9rem;
+    width: 100%;
+    letter-spacing: 0.4;
+    line-height: 1.5;
+  }
+
+  .main__right-reduce,
+  .main__right-price {
+    font-size: 0.8rem;
+  }
+
+  .buttons {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 1rem;
+  }
+  .button {
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+
+  .modale {
+    width: 325px;
+    height: 275px;
+    top: 13%;
+    right: 8%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .navbar__left-logo {
+    max-width: 130px;
+    margin-right: 0;
+  }
+}
