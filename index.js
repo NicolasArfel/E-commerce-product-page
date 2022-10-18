@@ -74,8 +74,8 @@ function changeArticleCount() {
     countEl.textContent = total;
     if (modaleActivated) {
       const modalePriceEl = document.querySelector('.modale__price');
-
       modalePriceEl.textContent = `$${price} x ${total} $${price * total}`;
+      cartEl.textContent = total;
     }
   });
   minusEl.addEventListener('click', () => {
@@ -90,8 +90,8 @@ function changeArticleCount() {
     countEl.textContent = total;
     if (modaleActivated) {
       const modalePriceEl = document.querySelector('.modale__price');
-
       modalePriceEl.textContent = `$${price} x ${total} $${price * total}`;
+      cartEl.textContent = total;
     }
   });
 }
