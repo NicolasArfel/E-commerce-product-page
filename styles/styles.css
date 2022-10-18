@@ -341,6 +341,9 @@ header {
   width: 50px;
   border-radius: 5px;
 }
+.material-symbols-outlined {
+  cursor: pointer;
+}
 
 .checkout {
   cursor: pointer;

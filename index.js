@@ -47,6 +47,19 @@ function createProductInModale() {
   modaleDescriptionEl.appendChild(checkoutEl);
   checkoutEl.classList.add('checkout', 'add');
   priceEl.classList.add('modale__price');
+  // delete the cart
+  function deleteProduct() {
+    deleteEl.addEventListener('click', () => {
+      total = 0;
+      countEl.textContent = total;
+      modaleActivated = false;
+      firstEl.remove();
+      checkoutEl.remove();
+
+      console.log('hi');
+    });
+  }
+  deleteProduct();
 }
 
 //i open the modale on click on "cart"
