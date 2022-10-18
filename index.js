@@ -1,4 +1,6 @@
 let total = 0;
+let price = 125.0;
+let modaleActivated = false;
 const countEl = document.querySelector('#counter');
 const plusEl = document.querySelector('#add');
 const minusEl = document.querySelector('#remove');
@@ -9,15 +11,49 @@ const largeImage = document.querySelector('.main__left-large');
 const lightbox = document.querySelector('.ligth-box');
 const close = document.querySelector('.close');
 const modale = document.querySelector('.modale');
+const modaleDescription = document.querySelector('.modale__description');
+const modalePriceEl = document.querySelector('.modale__price');
 
 // add product into the modale when clicking on Add to cart
+function createProductInModale() {
+  modaleDescription.remove();
+  const modaleDescriptionEl = document.createElement('div');
+  const firstEl = document.createElement('div');
+  const imgEl = new Image();
+  const descriptionEl = document.createElement('div');
+  const titleEl = document.createElement('h1');
+  const priceEl = document.createElement('p');
+  const deleteEl = document.createElement('span');
+  const checkoutEl = document.createElement('button');
+
+  titleEl.textContent = 'Fall Limited Sneakers';
+  priceEl.textContent = `$${price} x ${total} $${price * total}`;
+  deleteEl.classList.add('material-symbols-outlined');
+  deleteEl.textContent = 'delete';
+  checkoutEl.textContent = 'Checkout';
+
+  modale.appendChild(modaleDescriptionEl);
+  modaleDescriptionEl.classList.add('modale__description');
+  imgEl.src = 'http://127.0.0.1:5500/images/image-product-1.jpg';
+  modaleDescriptionEl.appendChild(firstEl);
+  imgEl.classList.add('modale__image');
+  firstEl.classList.add('modale__top');
+  firstEl.appendChild(imgEl);
+  firstEl.appendChild(descriptionEl);
+  descriptionEl.classList.add('modale__text');
+  descriptionEl.appendChild(titleEl);
+  descriptionEl.appendChild(priceEl);
+  firstEl.appendChild(deleteEl);
+  modaleDescriptionEl.appendChild(checkoutEl);
+  checkoutEl.classList.add('checkout', 'add');
+  priceEl.classList.add('modale__price');
+}
 
 //i open the modale on click on "cart"
 
 function openModale() {
   cartIcon.addEventListener('click', () => {
     modale.classList.toggle('isActive');
-    console.log('hi');
   });
 }
 //i open light-box on click in the large image
@@ -36,7 +72,11 @@ function changeArticleCount() {
   plusEl.addEventListener('click', () => {
     total++;
     countEl.textContent = total;
-    cartEl.textContent = total;
+    if (modaleActivated) {
+      const modalePriceEl = document.querySelector('.modale__price');
+
+      modalePriceEl.textContent = `$${price} x ${total} $${price * total}`;
+    }
   });
   minusEl.addEventListener('click', () => {
     if (total < 1) {
@@ -48,7 +88,11 @@ function changeArticleCount() {
       }
     }
     countEl.textContent = total;
-    cartEl.textContent = total;
+    if (modaleActivated) {
+      const modalePriceEl = document.querySelector('.modale__price');
+
+      modalePriceEl.textContent = `$${price} x ${total} $${price * total}`;
+    }
   });
 }
 
@@ -60,6 +104,11 @@ function setActived() {
     cartEl.textContent = total;
     if (total > 0) {
       cartEl.classList.add('count-actived');
+      //create the product into the modale
+      if (!modaleActivated) {
+        createProductInModale();
+        modaleActivated = true;
+      }
     }
   });
 }

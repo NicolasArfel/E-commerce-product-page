@@ -307,17 +307,22 @@ header {
   height: 200px;
   width: 300px;
   border-radius: 10px;
-  font-weight: 700;
 }
 
 .modale__title {
+  font-weight: 700;
   height: 10%;
   border-bottom: 1px solid var(--grayish-blue);
   padding: 1rem;
 }
+.modale__top {
+  display: flex;
+  align-items: center;
+}
 
 .modale__description {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   margin: auto;
@@ -325,7 +330,30 @@ header {
   font-size: 0.9rem;
   letter-spacing: 0.2;
 }
+.modale__text {
+  margin: 0 1rem;
+}
+.modale__text h1 {
+  margin-bottom: 0.5rem;
+}
 
+.modale__image {
+  width: 50px;
+  border-radius: 5px;
+}
+
+.checkout {
+  cursor: pointer;
+  color: white;
+  background-color: var(--orange);
+  width: 100%;
+  font-size: 0.8rem;
+  padding: 0.8rem;
+  margin-top: 1rem;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+}
 .isActive {
   display: flex;
 }
