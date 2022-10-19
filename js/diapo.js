@@ -58,6 +58,7 @@ function setSelected() {
 images.forEach((img) => {
   img.addEventListener('click', () => {
     let source = img.src;
+    console.log(source);
 
     switch (source) {
       case smallImageArray[0]:
