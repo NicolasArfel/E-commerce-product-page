@@ -1,8 +1,8 @@
 const largeImageArray = [
-  'http://127.0.0.1:5500/images/image-product-1.jpg',
-  'http://127.0.0.1:5500/images/image-product-2.jpg',
-  'http://127.0.0.1:5500/images/image-product-3.jpg',
-  'http://127.0.0.1:5500/images/image-product-4.jpg',
+  './images/image-product-1.jpg',
+  './images/image-product-2.jpg',
+  './images/image-product-3.jpg',
+  './images/image-product-4.jpg',
 ];
 const smallImageArray = [
   'http://127.0.0.1:5500/images/image-product-1-thumbnail.jpg',
