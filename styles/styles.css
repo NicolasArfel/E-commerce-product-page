@@ -97,9 +97,6 @@ header {
   top: 15%;
   left: 35%;
 }
-.count-actived {
-  display: flex;
-}
 .navbar__right-avatar {
   cursor: pointer;
   width: 3rem;
@@ -317,6 +314,9 @@ header {
   width: 300px;
   border-radius: 10px;
 }
+.modale__container {
+  height: 100%;
+}
 
 .modale__title {
   font-weight: 700;
@@ -335,7 +335,7 @@ header {
   align-items: center;
   justify-content: center;
   margin: auto;
-  height: 75%;
+  height: 100%;
   font-size: 0.9rem;
   letter-spacing: 0.2;
 }
@@ -423,7 +423,7 @@ header {
     transform: translateX(-1000px);
     transition: transform 600ms ease-in-out;
   }
-  .open {
+  .isOpen {
     transform: translateX(0);
   }
 }

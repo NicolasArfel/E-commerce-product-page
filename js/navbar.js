@@ -1,22 +1,27 @@
+//DOM Elements
 const burgerMenu = document.querySelector('.navbar__menu');
 const burgerIcon = document.querySelector('.navbar__left-burger');
 const closeIcon = document.querySelector('.navbar__left-close');
 const links = document.querySelectorAll('.navbar__left-links');
 
+//open burger menu
 function openMenuBurger() {
   burgerIcon.addEventListener('click', () => {
-    burgerMenu.classList.add('open');
+    addClass(burgerMenu, 'isOpen');
   });
 }
 
-function remove(element) {
-  element.addEventListener('click', () => {
-    burgerMenu.classList.remove('open');
+// close burger menu
+function closeMenuBurger() {
+  closeIcon.addEventListener('click', () => {
+    removeClass(burgerMenu, 'isOpen');
+  });
+  links.forEach((link) => {
+    link.addEventListener('click', () => {
+      removeClass(burgerMenu, 'isOpen');
+    });
   });
 }
-remove(closeIcon);
-links.forEach((link) => {
-  remove(link);
-});
 
 openMenuBurger();
+closeMenuBurger();
