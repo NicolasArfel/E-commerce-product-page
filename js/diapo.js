@@ -5,10 +5,17 @@ const largeImageArray = [
   './images/image-product-4.jpg',
 ];
 const smallImageArray = [
-  'http://127.0.0.1:5500/images/image-product-1-thumbnail.jpg',
-  'http://127.0.0.1:5500/images/image-product-2-thumbnail.jpg',
-  'http://127.0.0.1:5500/images/image-product-3-thumbnail.jpg',
-  'http://127.0.0.1:5500/images/image-product-4-thumbnail.jpg',
+  // localhost url
+  // 'http://127.0.0.1:5500/images/image-product-1-thumbnail.jpg',
+  // 'http://127.0.0.1:5500/images/image-product-2-thumbnail.jpg',
+  // 'http://127.0.0.1:5500/images/image-product-3-thumbnail.jpg',
+  // 'http://127.0.0.1:5500/images/image-product-4-thumbnail.jpg',
+
+  // my netlify url
+  'https://sneakers-ecommerce-page.netlify.app/images/image-product-1-thumbnail.jpg',
+  'https://sneakers-ecommerce-page.netlify.app/images/image-product-2-thumbnail.jpg',
+  'https://sneakers-ecommerce-page.netlify.app/images/image-product-3-thumbnail.jpg',
+  'https://sneakers-ecommerce-page.netlify.app/images/image-product-4-thumbnail.jpg',
 ];
 let index = 0;
 const images = document.querySelectorAll('.image');
