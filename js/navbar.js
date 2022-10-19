@@ -1,19 +1,22 @@
+const burgerMenu = document.querySelector('.navbar__menu');
+const burgerIcon = document.querySelector('.navbar__left-burger');
+const closeIcon = document.querySelector('.navbar__left-close');
+const links = document.querySelectorAll('.navbar__left-links');
+
 function openMenuBurger() {
-  const burgerIcon = document.querySelector('.navbar__left-burger');
   burgerIcon.addEventListener('click', () => {
-    const burgerMenu = document.querySelector('.navbar__menu');
     burgerMenu.classList.add('open');
-    console.log('hello');
-  });
-}
-function closeMenuBurger() {
-  const closeIcon = document.querySelector('.navbar__left-close');
-  closeIcon.addEventListener('click', () => {
-    const burgerMenu = document.querySelector('.navbar__menu');
-    burgerMenu.classList.remove('open');
-    console.log('hello');
   });
 }
 
+function remove(element) {
+  element.addEventListener('click', () => {
+    burgerMenu.classList.remove('open');
+  });
+}
+remove(closeIcon);
+links.forEach((link) => {
+  remove(link);
+});
+
 openMenuBurger();
-closeMenuBurger();

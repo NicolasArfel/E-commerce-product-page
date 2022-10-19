@@ -424,14 +424,6 @@ header {
     transition: transform 600ms ease-in-out;
   }
   .open {
-    z-index: 1;
-    position: fixed;
-    left: 0;
-    top: 0;
-    flex-direction: column;
-    height: 100vh;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
     transform: translateX(0);
   }
 }
