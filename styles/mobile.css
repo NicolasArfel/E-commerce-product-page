@@ -1,3 +1,59 @@
+@media screen and (max-width: 1000px) {
+  .navbar__left-burger {
+    display: flex;
+    cursor: pointer;
+  }
+  .navbar__left {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .navbar__left-logo {
+    margin-right: 15%;
+  }
+  .navbar__left-list {
+    flex-direction: column;
+    background-color: white;
+    width: 70%;
+    height: 100%;
+    margin: 0;
+  }
+  .navbar__left-close {
+    display: block;
+    margin: 1rem;
+    font-weight: 700;
+  }
+  .navbar__left-links {
+    height: fit-content;
+    margin: 1rem;
+  }
+  a {
+    color: black;
+    font-weight: 700;
+  }
+  .navbar__menu {
+    z-index: 1;
+    position: fixed;
+    left: 0;
+    top: 0;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    transform: translateX(-1000px);
+    transition: transform 600ms ease-in-out;
+  }
+  .isOpen {
+    transform: translateX(0);
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .navbar__left-logo {
+    max-width: 130px;
+    margin-right: 0;
+  }
+}
+
 @media screen and (max-width: 700px) {
   body {
     width: 100%;
@@ -15,6 +71,9 @@
     display: flex;
     justify-content: space-between;
   }
+  .ligth-box {
+    display: none !important;
+  }
   footer {
     position: fixed;
     bottom: 0;
@@ -23,6 +82,19 @@
 }
 
 @media screen and (max-width: 500px) {
+  #left,
+  #right {
+    display: flex;
+    position: absolute;
+    top: 230px;
+  }
+  #left {
+    left: 20px;
+  }
+  #right {
+    right: 20px;
+  }
+
   .main {
     margin: 0;
   }
@@ -35,7 +107,7 @@
   }
   .main__left-large {
     object-fit: cover;
-    object-position: left;
+    object-position: top;
     width: 400px;
     max-height: 100% !important;
     border-radius: 0;

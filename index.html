@@ -14,10 +14,11 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
+    <!-- css -->
     <link rel="stylesheet" href="./styles/reset.css" />
     <link rel="stylesheet" href="./styles/styles.css" />
     <link rel="stylesheet" href="./styles/mobile.css" />
-    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <!-- javascript -->
     <script src="./js/index.js" defer></script>
     <script src="./js/navbar.js" defer></script>
     <script src="./js/cart.js" defer></script>
@@ -71,6 +72,12 @@
     </header>
     <main class="main">
       <section class="main__left">
+        <span id="left" class="material-symbols-outlined arrow left">
+          chevron_left
+        </span>
+        <span id="right" class="material-symbols-outlined arrow right">
+          chevron_right
+        </span>
         <img
           class="main__left-large"
           src="./images/image-product-1.jpg"
@@ -141,14 +148,6 @@
         </div>
       </article>
     </main>
-    <footer>
-      <div class="attribution">
-        Challenge by
-        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-          >Frontend Mentor</a
-        >. Coded by <a href="#">Your Name Here</a>.
-      </div>
-    </footer>
     <section class="main__left ligth-box">
       <div class="light-box__large-container">
         <span class="material-symbols-outlined close"> close </span>
@@ -201,5 +200,13 @@
         </div>
       </div>
     </section>
+    <footer>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Your Name Here</a>.
+      </div>
+    </footer>
   </body>
 </html>

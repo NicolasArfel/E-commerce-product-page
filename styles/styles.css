@@ -108,6 +108,10 @@ header {
 }
 
 /* --- main --- */
+#left,
+#right {
+  display: none;
+}
 .main {
   display: flex;
   width: 80%;
@@ -275,8 +279,8 @@ header {
 }
 .close {
   position: absolute;
-  right: 12.5%;
-  top: -5%;
+  right: 12%;
+  top: -40px;
   color: var(--orange);
   font-weight: bold;
   cursor: pointer;
@@ -293,12 +297,12 @@ header {
 }
 .left {
   position: absolute;
-  left: 10%;
+  left: 9%;
   top: 50%;
 }
 .right {
   position: absolute;
-  right: 10%;
+  right: 9%;
   top: 50%;
 }
 
@@ -358,7 +362,7 @@ header {
   cursor: pointer;
   color: white;
   background-color: var(--orange);
-  width: 100%;
+  width: 90%;
   font-size: 0.8rem;
   padding: 0.8rem;
   margin-top: 1rem;
@@ -377,60 +381,4 @@ header {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
-}
-
-@media screen and (max-width: 1000px) {
-  .navbar__left-burger {
-    display: flex;
-    cursor: pointer;
-  }
-  .navbar__left {
-    width: 100%;
-    justify-content: space-between;
-  }
-  .navbar__left-logo {
-    margin-right: 15%;
-  }
-  .navbar__left-list {
-    flex-direction: column;
-    background-color: white;
-    width: 70%;
-    height: 100%;
-    margin: 0;
-  }
-  .navbar__left-close {
-    display: block;
-    margin: 1rem;
-    font-weight: 700;
-  }
-  .navbar__left-links {
-    height: fit-content;
-    margin: 1rem;
-  }
-  a {
-    color: black;
-    font-weight: 700;
-  }
-  .navbar__menu {
-    z-index: 1;
-    position: fixed;
-    left: 0;
-    top: 0;
-    flex-direction: column;
-    height: 100vh;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    transform: translateX(-1000px);
-    transition: transform 600ms ease-in-out;
-  }
-  .isOpen {
-    transform: translateX(0);
-  }
-}
-
-@media screen and (max-width: 550px) {
-  .navbar__left-logo {
-    max-width: 130px;
-    margin-right: 0;
-  }
 }
